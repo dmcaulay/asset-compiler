@@ -4,7 +4,7 @@ This is meant to be a very simple asset compiler that helps speed up development
 
 ## hosting bootstrap
 
-In this example we have a less file `assets/css/style.less` on disk that uses bootstrap. When the client requests 'assets/css/style.css' the asset compiler compiles style.less and serves the result.
+In this example we have a less file `assets/css/style.less` on disk that uses bootstrap. When the client requests `assets/css/style.css` the asset compiler compiles `assets/css/style.less` and serves the result.
 
 ```javascript
 var flatiron = require('flatiron'),
