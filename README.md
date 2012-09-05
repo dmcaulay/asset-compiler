@@ -9,7 +9,7 @@ In this example we have a less file `assets/css/style.less` on disk that uses bo
 ```javascript
 var flatiron = require('flatiron'),
     union = require('union'),
-    assetCompiler = require('asset-compiler),
+    assetCompiler = require('asset-compiler'),
     app = flatiron.app;
 
 app.use(flatiron.plugins.http, {
