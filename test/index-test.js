@@ -1,34 +1,15 @@
 var assetPipe = require('../'),
     assert = require('assert'),
-    less = require('less'),
     fs = require('fs'),
     path = require('path'),
     should = require('should'),
     Stream = require('stream'),
     root = __dirname,
-    assets,
-    compilers;
+    assets;
 
 assets = {
   css: [ '/fixtures/assets/css' ],
   js: [ '/fixtures/assets/js' ]
-};
-
-compilers = {
-  css: {
-    less: function(body, cb) {
-      var parser = new less.Parser({
-        paths: assets.css
-      });
-      return parser.parse(body, function(e, tree) {
-        if (e) {
-          cb(e);
-          return;
-        }
-        cb(null, tree.toCSS());
-      });
-    }
-  }
 };
 
 describe('asset-pipe', function() {
@@ -55,7 +36,7 @@ describe('asset-pipe', function() {
         compiled.should.equal(data);
         done();
       };
-      assetPipe.middleware(root, assets, compilers)(req, res, function(req, res, next) {
+      assetPipe.middleware(root, assets)(req, res, function(req, res, next) {
         assert(false, 'should handle request');
       });
     });
@@ -71,7 +52,7 @@ describe('asset-pipe', function() {
         compiled.should.equal(data);
         done()
       };
-      assetPipe.middleware(root, assets, compilers)(req, res, function(req, res, next) {
+      assetPipe.middleware(root, assets)(req, res, function(req, res, next) {
         assert(false, 'should handle request');
       });
     });
