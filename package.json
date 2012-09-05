@@ -2,7 +2,7 @@
   "author": "Dan McAulay <dmcaulay@gmail.com>",
   "name": "asset-compiler",
   "description": "A middleware for connect and union, that compiles and hosts assets (less.js, CoffeeScript, stylus).",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./index.js",
   "scripts": {
     "test": "bin/test"
