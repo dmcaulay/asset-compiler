@@ -23,7 +23,7 @@ app.use(flatiron.plugins.http, {
 
 ## adding a compiler (not complete)
 
-Defining a compiler is fairly straight forward and the complete list is in an object called `compilerMap` because it maps file extensions to compilers. For example, css might map to a less compiler and a stylus compiler.
+Compilers are defined in the `compilerMap`. It maps file extensions to compilers. For example, css might map to a less compiler and a stylus compiler. The example below shows how you would define a less compiler.
 
 ```javascript
 var less = require('less'),
