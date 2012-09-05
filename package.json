@@ -3,9 +3,13 @@
   "name": "asset-compiler",
   "description": "A middleware for connect and union, that compiles and hosts assets (less.js, CoffeeScript, stylus).",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "./index.js",
   "scripts": {
     "test": "bin/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dmcaulay/asset-compiler"
   },
   "dependencies": {
     "underscore": "~1.3.3",
