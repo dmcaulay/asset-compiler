@@ -14,7 +14,7 @@ var flatiron = require('flatiron'),
 
 app.use(flatiron.plugins.http, {
   before: [
-    assetComiler.middleware(__dirname, {
+    assetCompiler.middleware(__dirname, {
       css: ['/assets/css', '/vendor/bootstrap/less']
     })
   ]
